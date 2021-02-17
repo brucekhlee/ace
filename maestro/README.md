@@ -1,6 +1,7 @@
-#  local documentation
-On Mac,
-open /opt/schrodinger/suites2020-2/docs/Documentation.htm
+#  Local Documentation
+On Mac, go to terminal and then
+
+    open /opt/schrodinger/suites2020-2/docs/Documentation.htm
 
 
 
