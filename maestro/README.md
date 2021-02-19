@@ -34,10 +34,23 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
    Sherman, W., H. S. Beard and R. Farid (2006). "Use of an induced fit receptor structure in virtual screening." Chem Biol Drug Des 67(1): 83-84.
 
 
+# command to check schrodinger license
+
+    # on cragger
+    /share/apps/schrodinger/suite2020-2/licadmin STAT
+    # on mac
+    /opt/schrodinger/suites2020-2/licadmin STAT
+
+
+    # Pay attention to prime liceses.
+    Users of PSP_PLOP:  (Total of 50 licenses issued;  Total of 0 licenses in use)
+    Users of PSP_PLOP_MEMBRANE:  (Total of 50 licenses issued;  Total of 0 licenses in use)
 
 
 
-# To Do
+
+
+# todo
 1. Convert and import ligand from chemdraw to maestro
    using smile to import all 50ish compunds into maestro... (with corret name)
 2. Rename ligand name in ligand.mae
