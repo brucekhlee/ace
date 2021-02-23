@@ -11,24 +11,18 @@ On Mac, go to terminal and then
 # Preparing Protein 
 ==> User Manuals ==> Protein Preparation Guide
 
-
-
-
 # Preparing Ligand
 ==> User Manuals ==> LigPrep User Manuals
-
-
-
 
 # Docking
 https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-docking-calculation
 
-# Glide
+## Glide
 1. Grid generation
 2. Docking
 
 
-# Induced Fit Docking
+## Induced Fit Docking
 1. Documentation ==>  Tutorials ==>  Induced Fit Docking Tutorial
 2. See the paper. https://pubmed.ncbi.nlm.nih.gov/16492153/
    Sherman, W., H. S. Beard and R. Farid (2006). "Use of an induced fit receptor structure in virtual screening." Chem Biol Drug Des 67(1): 83-84.
@@ -52,10 +46,32 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
 
 # todo
 1. Convert and import ligand from chemdraw to maestro
-   using smile to import all 50ish compunds into maestro... (with corret name)
+   using smile to import all 52 compunds into maestro... (with corret name)
 2. Rename ligand name in ligand.mae
    preparing a automate script to rename compound names
 3. Do the ligprep for ligand.mae
+
+
+
+# todo
+1. compounds list
+   TCK-1-76
+   TCK-1-49
+   TCK-2-43
+   TCK-2-80
+
+
+2. preparing everthing and write configureation files in local and then sync to cragger
+
+
+    # sync from  to remote
+    rsync -auv --progress ${LOCALDIR}/InducedFit_TCK-1-76/ khlee@cragger.nida.nih.gov:${REMOTEDIR}/InducedFit_TCK-1-76/
+    # on cragger; run IFD docking
+    ./run_*.sh
+    
+
+    # sync from remote to local
+    rsync -auv --progress khlee@cragger.nida.nih.gov:${REMOTEDIR}/InducedFit_TCK-1-76/ ${LOCALDIR}/InducedFit_TCK-1-76/
 
 
 
