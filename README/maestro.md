@@ -1,11 +1,9 @@
-#  Local Documentation
-On Mac, go to terminal and then
+#  Local Schrodinger Documentation
 
+    # On Mac, go to terminal and then
     open /opt/schrodinger/suites2020-2/docs/Documentation.htm
 
-
-
-# Using Maestro 
+# Using Maestro
 
 
 # Preparing Protein 
@@ -20,7 +18,6 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
 ## Glide
 1. Grid generation
 2. Docking
-
 
 ## Induced Fit Docking
 1. Documentation ==>  Tutorials ==>  Induced Fit Docking Tutorial
@@ -43,35 +40,15 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
 
 
 
-
 # todo
-1. Convert and import ligand from chemdraw to maestro
-   using smile to import all 52 compunds into maestro... (with corret name)
-2. Rename ligand name in ligand.mae
-   preparing a automate script to rename compound names
-3. Do the ligprep for ligand.mae
-
-
-
-# todo
-1. compounds list
-   TCK-1-76
-   TCK-1-49
-   TCK-2-43
-   TCK-2-80
-
-
-2. preparing everthing and write configureation files in local and then sync to cragger
-
-
-    # sync from  to remote
-    rsync -auv --progress ${LOCALDIR}/InducedFit_TCK-1-76/ khlee@cragger.nida.nih.gov:${REMOTEDIR}/InducedFit_TCK-1-76/
-    # on cragger; run IFD docking
-    ./run_*.sh
-    
-
-    # sync from remote to local
-    rsync -auv --progress khlee@cragger.nida.nih.gov:${REMOTEDIR}/InducedFit_TCK-1-76/ ${LOCALDIR}/InducedFit_TCK-1-76/
+0. parsing smile text files into individual files. (Andy)*****
+1. openbabel converts smi into 3D (khlee)
+2. Import ligands to maestro at once 
+3. Rename ligand name in ligand.mae 
+   preparing a automate script to rename compound names (Andy)*****
+4. Do the ligprep for ligand.mae
+5. protein strucutres (DAT-inward & DAT-outward)
+6. docking and screening using glide ====> (khlee)
 
 
 
