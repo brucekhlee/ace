@@ -22,9 +22,15 @@ $ which maestro
 /share/apps/schrodinger/suite2021-1/maestro
 
 
-# excute the script
+# execute the script
 $ ./ligprep_tck_compounds.sh
 JobId: compute-0-0-0-6037d810
+
+# check the progress of the job
+$ /share/apps/schrodinger/suite2021-1/jobcontrol -list 
+
+if you accidentally run multiple jobs, you can kill using this command
+$ /share/apps/schrodinger/suite2021-1/jobcontrol -killnooutput {JobId}
 
 ## rsync from remote to local
 rsync -auv --progress {REMOTE}  ${LOCAL} 
