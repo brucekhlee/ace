@@ -43,13 +43,16 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
 # todo
 0. parsing smile text files into individual files. (Andy)*****
 1. openbabel converts smi into 3D (khlee)
-2. Import ligands to maestro at once 
+2. Import ligands to maestro at once
 3. Rename ligand name in ligand.mae 
    preparing a automate script to rename compound names (Andy)*****
 4. Do the ligprep for ligand.mae
 5. protein strucutres (DAT-inward & DAT-outward)
 6. docking and screening using glide ====> (khlee)
 
-
-
-
+# todo (02/26)
+1. find a way to covert *.mae into *.pdb (Andy)
+2. docking 4 ligands with inward/outward facing (Andy)
+3. find a paper and send to everyone (Monday)
+4. fragment docking (khlee) protocol needed 
+5. need a python script to handle mae file (i.e., grep specific information from mae)
