@@ -56,3 +56,16 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
 3. find a paper and send to everyone (Monday)
 4. fragment docking (khlee) protocol needed 
 5. need a python script to handle mae file (i.e., grep specific information from mae)
+
+# todo (03/12)
+==> we want to calculate ligand rmsd between two different ligands. 
+
+Q. Which software package we should use for ligand rmsd analysis?
+
+Q. Can we read mae file in python?
+   
+Q. Can we call schrondinger API in python?
+
+Q. mae file format to others?
+
+
