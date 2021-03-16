@@ -62,10 +62,50 @@ https://www.schrodinger.com/training/videos/docking-ligand-docking/glide-ligand-
 
 Q. Which software package we should use for ligand rmsd analysis?
 
+Gromacs has a tool that does this. I believe it can be done in command line.
+
+    gmx rms -s cocrystalized_ligand.pdb -f docked_ligand.pdb -fit none -o output.xvg
+
+Reference: https://www.researchgate.net/post/How_can_I_calculate_RMSD_to_crystalographic_ligand_and_a_docked_ligand
+
+I believe we can also just use NumPy to do it.
+There is an answer in that link that details the steps to calculate RMSD.
+I do not know if this is exactly applicable to what we need.
+
 Q. Can we read mae file in python?
-   
+
+Yes, we can use RDKit.
+https://iwatobipen.wordpress.com/2018/11/01/read-maestro-format-file-from-rdkit/
+
 Q. Can we call schrondinger API in python?
+
+I think so. But you have to use Schrodinger's python 3.
+
+    $SCHRODINGER/run python3
+
+So far it looks like you can do it from command line. I believe the above command is used to set up the environment variables.
+If we know how to set up the environment, we should be able to set up an environment in PyCharm IDE.
+
+Reference: http://content.schrodinger.com/Docs/r2018-2/python_api/intro.html#:~:text=To%20use%20Schr%C3%B6dinger's%20modules%20%5B1,(see%20Interacting%20with%20Maestro).
 
 Q. mae file format to others?
 
+We can convert other files to and from mae using schrodinger structconvert script:
+    
+    On cragger, script can be found at path:
+    /share/apps/schrodinger/suite2021-1/utilities/structconvert
+    
+    Example run/protocol:
+    module load schrodinger/2021-1
+    cd /home/aguan/docking/docking4tcks
+    cp glide-dock_SP_4_tcks.maegz glide-dock_SP_4_tcks.mae.gz
+    gunzip glide-dock_SP_4_tcks.mae.gz
+    /share/apps/schrodinger/suite2021-1/utilities/structconvert -imae glide-dock_SP_4_tcks.mae -opdb test.pdb
 
+Using the file extension in the options (ex. imae) has been deprecated.
+You only need to use -i and -o options.
+
+If multiple structures in the .mae file, the structures will be written to separate pdb files.
+
+For more, check:
+https://www.schrodinger.com/kb/329
