@@ -1,9 +1,9 @@
 from pymol import cmd
 
-d3x_1 = cmd.load("d3x-1.pdb")
-d3x = cmd.load("d3x.pdb")
-cmd.align("d3x_1", "d3x")
-cmd.rms("d3x and resn unk, d2x and resn unk")
+cmd.load("d3x-1.pdb", "d3x")
+cmd.load("d2x-1.pdb", "d2x")
+cmd.align("d3x", "d2x")
+print(cmd.rms("d3x and resn unk", "d2x and resn unk"))
 
 # load d3x-1, d3x
 #
