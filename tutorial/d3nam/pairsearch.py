@@ -1,16 +1,13 @@
 from pymol import cmd
 
-cmd.load("d3x-1.pdb", "d3x")
-cmd.load("d2x-1.pdb", "d2x")
-cmd.align("d3x", "d2x")
-print(cmd.rms("d3x and resn unk", "d2x and resn unk"))
 
-# load d3x-1, d3x
-#
-# load d2x-1, d2x
-#
-#
-#
-# align d3x, d2x
-#
-# rms d3x and resn unk, d2x and resn unk
+def align_rms(target1, target2):
+    cmd.load(target1, "t1")
+    cmd.load(target2, "t2")
+    cmd.align("t1", "t2")
+    return cmd.rms("t1 and resn unk", "t2 and resn unk")
+
+
+target1 = "d3x-1.pdb"
+target2 = "d2x-1.pdb"
+print(align_rms(target1, target2))
