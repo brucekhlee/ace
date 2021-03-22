@@ -1,0 +1,9 @@
+# testing data dir  
+# all the testing data is here
+/home/khlee/repositories/dopamine/toolset/notebooks/data
+
+
+
+# interface
+/home/khlee/repositories/dopamine/toolset/gpcr/get_gpcr_interface.py
+
